@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bena <bena@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 11:21:02 by becastro          #+#    #+#             */
-/*   Updated: 2022/04/04 15:08:22 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/05 01:11:40 by bena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,9 @@
 #include <string.h>
 #include <ctype.h>
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	char	dst[20] = "hola";
-	char	*src;
-	size_t	size;
-
-	size = 13;
-	src = "buenas";
-	printf("%zu\n%s", ft_strlcat(dst, src, size), dst);
+	(void)argc;
+	printf("User atoi: %d\n", ft_atoi(argv[1]));
+	printf("Sis atoi: %d\n", atoi(argv[1]));;
 }
