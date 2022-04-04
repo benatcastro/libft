@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bena <bena@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/30 12:42:22 by becastro          #+#    #+#             */
-/*   Updated: 2022/03/30 12:51:56 by becastro         ###   ########.fr       */
+/*   Created: 2022/04/04 22:12:44 by bena              #+#    #+#             */
+/*   Updated: 2022/04/04 22:51:19 by bena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t		counter;
-	char		*str;
-
-	str = (char *)s;
+	size_t	counter;
+	char	*sub;
+	if (len == 0)
+		return (NULL);
 	counter = 0;
-	while (str[counter] && counter < n)
+	while (s[counter])
 	{
-		if (str[counter] == c)
-			return (&str[counter]);
+		if (s[counter] == (char)start)
+		{
+			sub = malloc(len * sizeof(char));
+			ft_strlcpy(sub, &s[counter], len);
+			return(sub);
+		}
 		counter++;
 	}
 	return (NULL);
+	
 }
