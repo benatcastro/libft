@@ -6,7 +6,7 @@
 /*   By: bena <bena@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 23:57:55 by bena              #+#    #+#             */
-/*   Updated: 2022/04/08 12:18:30 by bena             ###   ########.fr       */
+/*   Updated: 2022/04/08 15:52:57 by bena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ char *ft_strtrim(char const *s1, char const *set)
 	char	*str;
 	size_t	i;
 	
-	if (!(str = malloc(ft_strlen(s1 + 1))))
+	if (!(str = malloc(ft_strlen(s1) - ft_countchars(s1, set))))
 		return (NULL);
+	i = 0;
 	while (*s1)
 	{
 		if (ft_check_in_set(*s1, set) == 0)
