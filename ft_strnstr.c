@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bena <bena@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 22:52:16 by bena              #+#    #+#             */
-/*   Updated: 2022/04/08 16:40:07 by bena             ###   ########.fr       */
+/*   Updated: 2022/04/14 17:01:19 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-char *ft_strnstr(const char *s1, const char *s2, size_t n)
+char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
 	size_t	index;
 	size_t	find_len;
@@ -32,5 +32,5 @@ char *ft_strnstr(const char *s1, const char *s2, size_t n)
 			return((char *)&s1[index]);
 		index++;
 	}
-	return (NULL);	
+	return (NULL);
 }

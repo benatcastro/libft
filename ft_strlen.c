@@ -6,11 +6,12 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 16:20:16 by becastro          #+#    #+#             */
-/*   Updated: 2022/03/30 12:24:38 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/14 17:01:05 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

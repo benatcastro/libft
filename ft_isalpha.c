@@ -6,9 +6,11 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 11:00:27 by becastro          #+#    #+#             */
-/*   Updated: 2022/03/28 16:14:50 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/14 17:00:18 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(int argument)
 {

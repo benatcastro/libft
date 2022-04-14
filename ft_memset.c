@@ -6,11 +6,12 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 16:32:47 by becastro          #+#    #+#             */
-/*   Updated: 2022/04/04 10:38:11 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/14 16:59:06 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memset(void *str, int c, size_t n)
 {

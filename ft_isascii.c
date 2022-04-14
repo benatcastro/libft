@@ -6,9 +6,11 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 16:13:51 by becastro          #+#    #+#             */
-/*   Updated: 2022/03/28 16:14:48 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/14 17:00:19 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

@@ -6,9 +6,11 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 16:05:33 by becastro          #+#    #+#             */
-/*   Updated: 2022/03/28 16:14:49 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/14 17:00:18 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 //returns 1 if alphanumeric 0 if not
 int	ft_isalnum(int argument)
