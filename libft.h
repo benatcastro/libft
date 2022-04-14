@@ -6,13 +6,15 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 11:27:46 by becastro          #+#    #+#             */
-/*   Updated: 2022/04/14 21:34:59 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/14 21:48:40 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <stdlib.h>
+# include <string.h>
 
 int		ft_atoi(const char *nptr);
 int		ft_isalpha(int argument);
@@ -46,7 +48,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
-void ft_putnbr_fd(int n, int fd);
+void	ft_putnbr_fd(int n, int fd);
 //myfncs
 size_t	ft_countchars(const char *s1, const char *set);
 size_t	ft_intlen(int n);

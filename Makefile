@@ -6,7 +6,7 @@
 #    By: becastro <becastro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/04 10:13:11 by becastro          #+#    #+#              #
-#    Updated: 2022/04/14 21:33:54 by becastro         ###   ########.fr        #
+#    Updated: 2022/04/14 21:50:19 by becastro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ OBJS = $(SRC:.c=.o)
 
 CFLAGS = -Wall -Wextra -Werror
 
-all: $(OBJS)
+all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
