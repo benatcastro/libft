@@ -6,11 +6,10 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 20:19:49 by becastro          #+#    #+#             */
-/*   Updated: 2022/04/14 20:25:33 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/14 20:30:22 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <unistd.h>
 
 void	ft_putchar_fd(char c, int fd)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bena <bena@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 23:39:37 by bena              #+#    #+#             */
-/*   Updated: 2022/04/14 01:16:20 by bena             ###   ########.fr       */
+/*   Updated: 2022/04/14 20:35:48 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,38 +14,37 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-size_t ft_intlen(int n);
-char	ft_getdigit(long nbr, int digit);
+void	ft_makearr(char *str, long nbr);
 
 char	*ft_itoa(int n)
 {
-	long	nbr; 
+	long	nbr;
 	char	*str;
-	size_t	i;
 	size_t	int_len;
 
 	nbr = n;
-	i = 0;
+	if (nbr == -2147483648)
+	{
+		str = "-2147483648";
+		return (str);
+	}
 	int_len = ft_intlen(nbr);
-	if(!(str = malloc(ft_intlen(nbr) + 1)))
-		return (NULL);
 	if (nbr < 0)
 	{
-		str[0] = '-';
-		i++;
-		nbr *= -1;
 		int_len++;
-		printf("str: %s\n", str);
+		str = malloc((int_len + 1));
+		str[0] = '-';
+		nbr *= -1;
 	}
-	while (i < ft_intlen(nbr))
-	{
-		str[i] = ft_getdigit(nbr, i);
-		i++;
-	}
-	return(str);
+	else
+		str = malloc((int_len + 1));
+	if (!(str))
+		return (NULL);
+	ft_makearr(str, nbr);
+	return (str);
 }
 
-size_t ft_intlen(int n)
+size_t	ft_intlen(int n)
 {
 	size_t	counter;
 	size_t	multiplier;
@@ -55,7 +54,7 @@ size_t ft_intlen(int n)
 	{
 		n *= -1;
 		counter++;
-	}	
+	}
 	else if (n == 0)
 		return (1);
 	multiplier = 1;
@@ -64,23 +63,32 @@ size_t ft_intlen(int n)
 		counter++;
 		multiplier *= 10;
 	}
-	//printf("%ld", counter);
 	return (counter);
 }
 
 char	ft_getdigit(long nbr, int digit)
 {
-	size_t	i;
-	char	*digits;
-	digits = malloc(ft_intlen(int)nbr);
-	i = 0;
 	digit += 1;
-	nbr /= ft_power(10 , ft_intlen((int)nbr) - digit);
-	// printf("intlen %ld\n", ft_intlen((int)nbr) - nbr);
-	if (nbr > 10)
+	nbr /= ft_power(10, ft_intlen((int)nbr) - digit);
+	if (nbr >= 10)
 		nbr %= 10;
-	digits[i] = nbr;
-	i++;
-	printf("digit %ld\n", nbr);
 	return (nbr + '0');
+}
+
+void	ft_makearr(char *str, long nbr)
+{
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = 0;
+	if (str[0] == '-')
+		i++;
+	while (j < ft_intlen(nbr))
+	{
+		str[i] = ft_getdigit(nbr, j);
+		i++;
+		j++;
+	}
+	str[i] = '\0';
 }

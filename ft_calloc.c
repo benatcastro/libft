@@ -6,7 +6,7 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 10:41:21 by becastro          #+#    #+#             */
-/*   Updated: 2022/04/04 10:45:57 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/14 17:34:22 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,11 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*mem;
 
-	mem = malloc(count * size);
-	ft_bzero(mem, count);
+	if (count == 0)
+		return (NULL);
+	mem = malloc(sizeof(size) * count);
+	if (!mem)
+		return (NULL);
+	ft_bzero(mem, count * size);
 	return (mem);
 }

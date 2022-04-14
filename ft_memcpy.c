@@ -6,7 +6,7 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 17:04:58 by becastro          #+#    #+#             */
-/*   Updated: 2022/03/30 09:39:50 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/14 20:15:07 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,14 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	dest2 = (char *)dest;
 	src2 = (char *)src;
 	counter = 0;
-	while (counter < n)
+	if (dest || src)
 	{
-		dest2[counter] = src2[counter];
-		counter++;
+		while (counter < n)
+		{
+			dest2[counter] = src2[counter];
+			counter++;
+		}
+		return (dest2);
 	}
-	return (dest2);
+	return (NULL);
 }

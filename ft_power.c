@@ -6,16 +6,15 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 00:20:10 by bena              #+#    #+#             */
-/*   Updated: 2022/04/14 17:00:41 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/14 19:08:04 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-long ft_power(int base, int exp)
+long	ft_power(int base, int exp)
 {
-	int count;
+	int	count;
 	int	tmp;
 
 	if (exp == 1)
