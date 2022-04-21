@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bena <bena@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 13:30:59 by bena              #+#    #+#             */
-/*   Updated: 2022/04/14 20:16:21 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/21 06:27:01 by bena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,17 @@ char	**ft_split(char const *s, char c)
 	size_t	subs;
 
 	subs = ft_count_substrs(s, c);
-	if (!(str = malloc(ft_count_substrs(s, c) * sizeof(char *))))
+	str = malloc(ft_count_substrs(s, c) * sizeof(char *));
+	if (!(str))
 		return (NULL);
 	count = 0;
-	while (*s && count < subs)
+	while (*s && (count - 1) < subs)
 	{
 		while (*s == c)
 			s++;
-		if (!(str[count] = malloc(ft_sub_size(s, c))) )
+		printf("tab[0] mem: %lu\n", ft_sub_size(s,c));
+		(str[count] = malloc(ft_sub_size(s, c) + 1));
+		if (!(str))
 			return (NULL);
 		ft_strlcpy(str[count], s, ft_sub_size(s, c) + 1);
 		//printf("pre str: %s\n", str[count]);
@@ -68,6 +71,8 @@ size_t	ft_count_substrs(char const *s, char c)
 			count++;
 		s++;
 	}
-	//printf("sub count: %ld\n", ft_strlen(s));
+	printf("sub count: %ld\n", count);
+	if (count > 0)
+		return (count + 1);
 	return (count);
 }
