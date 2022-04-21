@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bena <bena@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 10:41:21 by becastro          #+#    #+#             */
-/*   Updated: 2022/04/14 17:34:22 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/21 05:39:07 by bena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ void	*ft_calloc(size_t count, size_t size)
 
 	if (count == 0)
 		return (NULL);
-	mem = malloc(sizeof(size) * count);
+	else if (count > 9223372036854775807 || size > 9223372036854775807)
+		return (NULL);
+	mem = malloc(size * count);
 	if (!mem)
 		return (NULL);
 	ft_bzero(mem, count * size);
