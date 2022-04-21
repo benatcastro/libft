@@ -6,7 +6,7 @@
 /*   By: bena <bena@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 23:39:37 by bena              #+#    #+#             */
-/*   Updated: 2022/04/21 03:02:14 by bena             ###   ########.fr       */
+/*   Updated: 2022/04/21 04:26:55 by bena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_itoa(int n)
 	if (nbr < 0)
 	{
 		int_len++;
-		str = malloc((int_len + 1));
+		str = malloc((int_len));
 		str[0] = '-';
 		nbr *= -1;
 	}
@@ -46,8 +46,8 @@ char	*ft_itoa(int n)
 
 size_t	ft_intlen(int n)
 {
-	size_t	counter;
-	size_t	multiplier;
+	size_t			counter;
+	unsigned long	multiplier;
 
 	counter = 0;
 	if (n < 0)
@@ -91,10 +91,4 @@ void	ft_makearr(char *str, long nbr)
 		j++;
 	}
 	str[i] = '\0';
-}
-
-int main (int argc, char **argv)
-{
-	(void)argc;
-	printf("%d\n", ft_atoi(argv[1]));
 }
