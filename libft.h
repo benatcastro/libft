@@ -6,7 +6,7 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 11:27:46 by becastro          #+#    #+#             */
-/*   Updated: 2022/04/14 21:48:40 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/21 20:13:14 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,7 @@ size_t	ft_countchars(const char *s1, const char *set);
 size_t	ft_intlen(int n);
 long	ft_power(int base, int exp);
 char	ft_getdigit(long nbr, int digit);
+char	*ft_strldup(const char *s1, size_t len);
+
 
 #endif
