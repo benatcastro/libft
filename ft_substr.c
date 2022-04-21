@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bena <bena@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 22:12:44 by bena              #+#    #+#             */
-/*   Updated: 2022/04/21 05:54:20 by bena             ###   ########.fr       */
+/*   Updated: 2022/04/22 01:41:18 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 
 	if (start >= ft_strlen(s))
-		return (NULL);
+	{
+		str = (char *)malloc(0);
+		return (str);
+	}
 	str = NULL;
 	s += start;
 	if (len > ft_strlen(s))
@@ -30,3 +33,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(str, s, len + 1);
 	return (str);
 }
+
+// int	main(void)
+// {
+// 	// char	*s = "tripouille";
+// 	printf("%s \n", ft_substr("tripouille", 100, 1));
+// }
