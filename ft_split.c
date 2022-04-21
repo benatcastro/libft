@@ -6,7 +6,7 @@
 /*   By: bena <bena@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 13:30:59 by bena              #+#    #+#             */
-/*   Updated: 2022/04/21 06:27:01 by bena             ###   ########.fr       */
+/*   Updated: 2022/04/21 07:31:00 by bena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,25 +21,24 @@ char	**ft_split(char const *s, char c)
 {
 	char	**str;
 	size_t	count;
-	size_t	subs;
+	size_t	i;
 
-	subs = ft_count_substrs(s, c);
+	i = 0;
 	str = malloc(ft_count_substrs(s, c) * sizeof(char *));
 	if (!(str))
 		return (NULL);
 	count = 0;
-	while (*s && (count - 1) < subs)
+	while (*s)
 	{
-		while (*s == c)
-			s++;
-		printf("tab[0] mem: %lu\n", ft_sub_size(s,c));
-		(str[count] = malloc(ft_sub_size(s, c) + 1));
-		if (!(str))
-			return (NULL);
-		ft_strlcpy(str[count], s, ft_sub_size(s, c) + 1);
-		//printf("pre str: %s\n", str[count]);
-		count++;
-		s += ft_sub_size(s, c);
+		if (*s != c)
+		{
+			//printf("to print %s\n", s);
+			str[count] = ft_strldup(s, ft_sub_size(s, c));
+			count++;
+			s += ft_sub_size(s,c);
+			printf("TEST:%s\n", s);
+		}
+		i++;
 		s++;
 	}
 	return (str);
@@ -47,22 +46,21 @@ char	**ft_split(char const *s, char c)
 
 size_t	ft_sub_size(char const *s, char c)
 {
-	size_t	counter;
+	size_t i;
 
-	counter = 0;
-	while (s[counter])
+	i = 0;
+	while (*s && s[1] != c)
 	{
-		if (s[counter] == c)
-			break ;
-		counter++;
+		i++;
+		s++;
 	}
-	//printf("Sub size: %ld\n", counter);
-	return (counter);
+
+	return (i + 1);
 }
 
 size_t	ft_count_substrs(char const *s, char c)
 {
-	size_t count;
+	size_t	count;
 
 	count = 0;
 	while (*s)
@@ -71,7 +69,7 @@ size_t	ft_count_substrs(char const *s, char c)
 			count++;
 		s++;
 	}
-	printf("sub count: %ld\n", count);
+	//printf("sub count: %ld\n", count);
 	if (count > 0)
 		return (count + 1);
 	return (count);
