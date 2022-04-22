@@ -3,64 +3,44 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bena <bena@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 23:57:55 by bena              #+#    #+#             */
-/*   Updated: 2022/04/08 15:52:57 by bena             ###   ########.fr       */
+/*   Updated: 2022/04/22 09:15:01 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-unsigned int ft_check_in_set (char c, const char *set);
+unsigned int	ft_check_in_set(char c, const char *set);
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
-	size_t	i;
-	
-	if (!(str = malloc(ft_strlen(s1) - ft_countchars(s1, set))))
+	int		start;
+	int		end;
+
+	if (s1 == NULL || set == NULL)
 		return (NULL);
-	i = 0;
-	while (*s1)
+	start = 0;
+	while (s1[start] != '\0')
 	{
-		if (ft_check_in_set(*s1, set) == 0)
-		{
-			str[i] = *s1;
-			i++;
-		}
-		s1++;
+		if (!(ft_check_in_set(s1[start], set)))
+			break ;
+		start++;
 	}
+	end = ft_strlen(s1);
+	while (end--)
+	{
+		if (!(ft_check_in_set(s1[end], set)))
+			break ;
+	}
+	str = ft_substr(s1, start, (end - start) + 1);
 	return (str);
 }
 
-size_t	ft_countchars(const char *s1, const char *set)
-{
-	size_t	counter;
-	size_t	index1;
-	size_t	index2;
-
-	counter = 0;
-	index1 = 0;
-	while (s1[index1])
-	{
-		index2 = 0;
-		while (set[index2])
-		{
-			if(s1[index1] == set[index2])
-			{
-				counter++;
-				break;
-			}
-			index2++;
-		}
-		index1++;
-	}
-return (counter);
-}
-
-unsigned int ft_check_in_set (char c, const char *set)
+unsigned int	ft_check_in_set(char c, const char *set)
 {
 	while (*set)
 	{
@@ -70,3 +50,8 @@ unsigned int ft_check_in_set (char c, const char *set)
 	}
 	return (0);
 }
+// int	main(void)
+// {
+// 	char *s = ft_strtrim(""   xxx   xxx"", " x");
+// 	printf("%s", s);
+// }
