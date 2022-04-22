@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bena <bena@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 23:39:37 by bena              #+#    #+#             */
-/*   Updated: 2022/04/21 04:26:55 by bena             ###   ########.fr       */
+/*   Updated: 2022/04/22 06:23:37 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,20 +24,20 @@ char	*ft_itoa(int n)
 
 	nbr = n;
 	if (nbr == -2147483648)
-	{
-		str = ft_strdup("-2147483648");
-		return (str);
-	}
-	int_len = ft_intlen(nbr);
+		return (str = ft_strdup("-2147483648"));
+	else if (n == 0)
+		return (str = ft_strdup("0"));
+	int_len = ft_intlen(nbr) + 1;
 	if (nbr < 0)
 	{
-		int_len++;
 		str = malloc((int_len));
+		if (!(str))
+			return (NULL);
 		str[0] = '-';
 		nbr *= -1;
 	}
 	else
-		str = malloc((int_len + 1));
+		str = malloc((int_len));
 	if (!(str))
 		return (NULL);
 	ft_makearr(str, nbr);
