@@ -6,7 +6,7 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 12:42:22 by becastro          #+#    #+#             */
-/*   Updated: 2022/04/14 17:19:11 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/22 09:21:24 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		}
 		counter++;
 	}
-
 	return (NULL);
 }
-
-	// int main(void)
-	// {
-	// 	printf("%s", ft_memchr("hola victor zayas puto amo te la mamo", 'p', 20));
-	// }
