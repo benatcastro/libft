@@ -6,7 +6,7 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 22:12:44 by bena              #+#    #+#             */
-/*   Updated: 2022/04/22 01:41:18 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/22 02:31:41 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (start >= ft_strlen(s))
 	{
-		str = (char *)malloc(0);
+		str = (char *)malloc(1);
+		*str = '\0';
 		return (str);
 	}
 	str = NULL;
