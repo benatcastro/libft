@@ -5,36 +5,91 @@
 #                                                     +:+ +:+         +:+      #
 #    By: becastro <becastro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/04/04 10:13:11 by becastro          #+#    #+#              #
-#    Updated: 2022/04/22 07:07:56 by becastro         ###   ########.fr        #
+#    Created: 2021/05/24 12:12:22 by vzayas-s          #+#    #+#              #
+#    Updated: 2022/04/22 12:29:19 by becastro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-SRC = ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
-		ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_strchr.c \
-		ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strncmp.c ft_strrchr.c ft_tolower.c \
-		ft_toupper.c ft_calloc.c ft_strdup.c ft_substr.c ft_strnstr.c ft_atoi.c \
-		ft_strjoin.c ft_strtrim.c ft_split.c  ft_power.c ft_itoa.c ft_putchar_fd.c \
-		ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_strldup.c ft_ctostr.c
 
-OBJS = $(SRC:.c=.o)
+SRC = ft_isalpha.c			\
+	  ft_isdigit.c			\
+	  ft_isalnum.c			\
+	  ft_isascii.c			\
+	  ft_isprint.c			\
+	  ft_strlen.c			\
+	  ft_strlcpy.c			\
+	  ft_strlcat.c			\
+	  ft_strncmp.c			\
+	  ft_toupper.c			\
+	  ft_tolower.c			\
+	  ft_strnstr.c			\
+	  ft_atoi.c				\
+	  ft_strchr.c			\
+	  ft_strrchr.c			\
+	  ft_memset.c			\
+	  ft_bzero.c			\
+	  ft_memchr.c			\
+	  ft_memcmp.c			\
+	  ft_memcpy.c			\
+	  ft_memmove.c			\
+	  ft_calloc.c			\
+	  ft_strdup.c			\
+	  ft_substr.c			\
+	  ft_strjoin.c			\
+	  ft_strtrim.c			\
+	  ft_split.c			\
+	  ft_itoa.c				\
+	  ft_strmapi.c			\
+	  ft_striteri.c 		\
+	  ft_putchar_fd.c 		\
+	  ft_putstr_fd.c 		\
+	  ft_putendl_fd.c		\
+	  ft_putnbr_fd.c		\
+	  ft_power.c			\
+	  ft_strldup.c
 
+BONUS = ft_lstadd_front_bonus.c \
+		ft_lstlast_bonus.c      \
+		ft_lstnew_bonus.c  		\
+		ft_lstsize_bonus.c
+
+
+INCLUDES = libft.h
+
+OBJ = $(SRC:.c=.o)
+
+BONUS_OBJS = $(BONUS:.c=.o)
+
+CC = gcc
 AR = ar rc
-CFLAGS = -Wall -Wextra -Werror #-fsanitize=address -g3
+CFLAGS = -Wall -Wextra -Werror
+RM = /bin/rm -f
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	$(AR) $(NAME) $(OBJS)
+$(NAME) : $(OBJ) $(INCLUDES)
+	@$(AR) $(NAME) $(OBJ)
+	@echo "library created"
 
-$(OBJS): $(SRC)
-	gcc $(CFLAGS) -c $(SRC)
+bonus: $(BONUS_OBJS) $(OBJ) $(INCLUDES)
+	@$(AR) $(NAME) $(BONUS_OBJS) $(OBJ)
+	@echo "Bonus Compiled"
+
+$(OBJ) : $(SRC)
+	@$(CC) $(CFLAGS) -c $(SRC)
+
+$(BONUS_OBJS) : $(BONUS)
+	@$(CC) $(CFLAGS) -c $(BONUS)
 
 clean:
-	@rm -r $(OBJS)
+	@$(RM) $(OBJ) $(BONUS_OBJS)
+	@echo "objs deleted"
 
 fclean: clean
-	@rm -f $(NAME)
+	@$(RM) $(NAME)
+	@echo "executable deleted"
 
-re: fclean all clean
+re: fclean all
+
+.PHONY: all clean fclean re bonus
