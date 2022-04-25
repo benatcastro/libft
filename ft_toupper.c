@@ -6,9 +6,11 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 10:58:11 by becastro          #+#    #+#             */
-/*   Updated: 2022/03/30 11:03:11 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/25 12:31:16 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

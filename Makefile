@@ -6,7 +6,7 @@
 #    By: becastro <becastro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/04 10:13:11 by becastro          #+#    #+#              #
-#    Updated: 2022/04/25 09:38:48 by becastro         ###   ########.fr        #
+#    Updated: 2022/04/25 12:32:46 by becastro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,9 @@ BONUS = ft_lstadd_front_bonus.c \
 		ft_lstsize_bonus.c		\
 		ft_lstadd_back_bonus.c 	\
 		ft_lstdelone_bonus.c	\
-		ft_lstclear_bonus.c
+		ft_lstclear_bonus.c		\
+		ft_lstiter_bonus.c		\
+		ft_lstmap_bonus.c
 
 INCLUDES = libft.h
 
@@ -72,11 +74,9 @@ all: $(NAME)
 
 $(NAME) : $(OBJ) $(INCLUDES)
 	@$(AR) $(NAME) $(OBJ)
-	@echo "library created"
 
 bonus: $(BONUS_OBJS) $(OBJ) $(INCLUDES)
 	@$(AR) $(NAME) $(BONUS_OBJS) $(OBJ)
-	@echo "Bonus Compiled"
 
 $(OBJ) : $(SRC)
 	@$(CC) $(CFLAGS) -c $(SRC)
@@ -86,11 +86,9 @@ $(BONUS_OBJS) : $(BONUS)
 
 clean:
 	@$(RM) $(OBJ) $(BONUS_OBJS)
-	@echo "objs deleted"
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo "executable deleted"
 
 re: fclean all
 

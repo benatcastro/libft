@@ -6,12 +6,11 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 13:30:59 by bena              #+#    #+#             */
-/*   Updated: 2022/04/22 04:42:01 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/25 12:30:10 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 size_t		ft_sub_size(char const *s, char c);

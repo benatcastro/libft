@@ -3,15 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bena <bena@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 11:07:56 by becastro          #+#    #+#             */
-/*   Updated: 2022/04/25 06:48:06 by bena             ###   ########.fr       */
+/*   Updated: 2022/04/25 12:30:18 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdlib.h>
-#include "libft.h"
 
 #include <stdlib.h>
 #include "libft.h"
