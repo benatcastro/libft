@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bena <bena@student.42.fr>                  +#+  +:+       +#+         #
+#    By: becastro <becastro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/04 10:13:11 by becastro          #+#    #+#              #
-#    Updated: 2022/04/25 07:45:22 by bena             ###   ########.fr        #
+#    Updated: 2022/04/25 09:38:48 by becastro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,7 @@ BONUS = ft_lstadd_front_bonus.c \
 		ft_lstsize_bonus.c		\
 		ft_lstadd_back_bonus.c 	\
 		ft_lstdelone_bonus.c	\
+		ft_lstclear_bonus.c
 
 INCLUDES = libft.h
 
