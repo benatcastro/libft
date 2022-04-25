@@ -6,7 +6,7 @@
 #    By: bena <bena@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/04 10:13:11 by becastro          #+#    #+#              #
-#    Updated: 2022/04/21 07:31:11 by bena             ###   ########.fr        #
+#    Updated: 2022/04/25 07:45:22 by bena             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,8 +52,9 @@ SRC = ft_isalpha.c			\
 BONUS = ft_lstadd_front_bonus.c \
 		ft_lstlast_bonus.c      \
 		ft_lstnew_bonus.c  		\
-		ft_lstsize_bonus.c
-
+		ft_lstsize_bonus.c		\
+		ft_lstadd_back_bonus.c 	\
+		ft_lstdelone_bonus.c	\
 
 INCLUDES = libft.h
 

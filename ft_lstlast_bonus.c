@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bena <bena@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 11:52:11 by becastro          #+#    #+#             */
-/*   Updated: 2022/04/22 12:45:13 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/25 07:34:20 by bena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	if (lst)
+	if (!lst)
+		return (NULL);
+	{
 		while (lst->next)
 			lst = lst->next;
+	}
 	return (lst);
 }

@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bena <bena@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/28 16:20:16 by becastro          #+#    #+#             */
-/*   Updated: 2022/04/25 07:13:23 by bena             ###   ########.fr       */
+/*   Created: 2022/04/23 00:58:08 by bena              #+#    #+#             */
+/*   Updated: 2022/04/25 07:21:56 by bena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	size_t	counter;
+	t_list	*aux;
 
-	counter = 0;
-	while (s[counter])
+	if (lst)
 	{
-		counter++;
+		if (!*lst)
+		{
+			aux = ft_lstlast(*lst);
+			aux -> next = new;
+		}
+		else
+			*lst = new;
 	}
-	return (counter);
 }
