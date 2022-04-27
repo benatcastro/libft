@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: becastro <becastro@student.42.fr>          +#+  +:+       +#+         #
+#    By: bena <bena@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/04 10:13:11 by becastro          #+#    #+#              #
-#    Updated: 2022/04/25 12:32:46 by becastro         ###   ########.fr        #
+#    Updated: 2022/04/27 08:34:49 by bena             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRC = ft_isalpha.c			\
+SRC =ft_isalpha.c			\
 	  ft_isdigit.c			\
 	  ft_isalnum.c			\
 	  ft_isascii.c			\
@@ -45,9 +45,7 @@ SRC = ft_isalpha.c			\
 	  ft_putchar_fd.c 		\
 	  ft_putstr_fd.c 		\
 	  ft_putendl_fd.c		\
-	  ft_putnbr_fd.c		\
-	  ft_power.c			\
-	  ft_strldup.c
+	  ft_putnbr_fd.c
 
 BONUS = ft_lstadd_front_bonus.c \
 		ft_lstlast_bonus.c      \

@@ -3,17 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bena <bena@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 23:39:37 by bena              #+#    #+#             */
-/*   Updated: 2022/04/25 12:29:16 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/27 08:25:34 by bena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	ft_makearr(char *str, long nbr);
+long	ft_power(int base, int exp);
+size_t	ft_intlen(int n);
+char	ft_getdigit(long nbr, int digit);
 
 char	*ft_itoa(int n)
 {
@@ -90,4 +92,23 @@ void	ft_makearr(char *str, long nbr)
 		j++;
 	}
 	str[i] = '\0';
+}
+
+long	ft_power(int base, int exp)
+{
+	int	count;
+	int	tmp;
+
+	if (exp == 1)
+		return (base);
+	else if (exp <= 0)
+		return (1);
+	tmp = base;
+	count = 1;
+	while (count < exp)
+	{
+		base *= tmp;
+		count++;
+	}
+	return (base);
 }

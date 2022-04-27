@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bena <bena@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 13:30:59 by bena              #+#    #+#             */
-/*   Updated: 2022/04/25 12:30:10 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/27 08:36:36 by bena             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 size_t		ft_sub_size(char const *s, char c);
 size_t		ft_count_substrs(char const *s, char c);
 const char	*ft_next_word(const char *s, char c);
+char		*ft_strldup(const char *s1, size_t len);
 
 char	**ft_split(char const *s, char c)
 {
@@ -75,4 +75,15 @@ size_t	ft_count_substrs(char const *s, char c)
 		s++;
 	}
 	return (count + 1);
+}
+
+char	*ft_strldup(const char *s1, size_t len)
+{
+	char	*str;
+
+	str = malloc((len + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
+	ft_strlcpy(str, s1, len + 1);
+	return (str);
 }
