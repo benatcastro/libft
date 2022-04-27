@@ -6,12 +6,11 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 15:59:19 by bena              #+#    #+#             */
-/*   Updated: 2022/04/22 10:02:34 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/27 14:54:15 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

@@ -6,12 +6,11 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 11:07:56 by becastro          #+#    #+#             */
-/*   Updated: 2022/04/25 12:30:18 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/27 14:53:48 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft.h"
+#include <libft.h>
 
 char	*ft_strchr(const char *s, int c)
 {

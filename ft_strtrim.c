@@ -6,12 +6,11 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 23:57:55 by bena              #+#    #+#             */
-/*   Updated: 2022/04/22 09:15:01 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/27 14:54:31 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 unsigned int	ft_check_in_set(char c, const char *set);
 

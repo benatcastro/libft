@@ -6,13 +6,11 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 22:12:44 by bena              #+#    #+#             */
-/*   Updated: 2022/04/22 02:31:41 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/27 14:54:36 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

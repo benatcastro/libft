@@ -6,11 +6,10 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 12:55:20 by becastro          #+#    #+#             */
-/*   Updated: 2022/04/14 17:00:21 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/27 14:51:47 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)

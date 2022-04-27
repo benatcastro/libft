@@ -6,12 +6,11 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 00:48:44 by bena              #+#    #+#             */
-/*   Updated: 2022/04/22 09:20:13 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/27 14:50:16 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 int	ft_atoi(const char *nptr)
 {

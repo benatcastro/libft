@@ -6,11 +6,10 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 17:04:58 by becastro          #+#    #+#             */
-/*   Updated: 2022/04/25 12:29:45 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/27 14:51:49 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)

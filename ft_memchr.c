@@ -6,13 +6,11 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 12:42:22 by becastro          #+#    #+#             */
-/*   Updated: 2022/04/22 09:21:24 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/27 14:51:40 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

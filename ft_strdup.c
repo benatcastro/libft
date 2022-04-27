@@ -6,11 +6,10 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:56:45 by becastro          #+#    #+#             */
-/*   Updated: 2022/04/04 14:42:43 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/27 14:53:57 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *s1)

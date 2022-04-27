@@ -6,11 +6,10 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 10:28:38 by becastro          #+#    #+#             */
-/*   Updated: 2022/04/04 15:29:12 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/27 14:54:04 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)

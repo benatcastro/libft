@@ -6,13 +6,11 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 21:34:03 by becastro          #+#    #+#             */
-/*   Updated: 2022/04/22 09:37:29 by becastro         ###   ########.fr       */
+/*   Updated: 2022/04/27 14:53:28 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
-#include <stdio.h>
 
 void	ft_nbr(unsigned int n, int fd)
 {
