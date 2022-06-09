@@ -6,20 +6,19 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 16:20:16 by becastro          #+#    #+#             */
-/*   Updated: 2022/04/27 14:54:10 by becastro         ###   ########.fr       */
+/*   Updated: 2022/06/09 14:56:36 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 size_t	ft_strlen(const char *s)
 {
 	size_t	counter;
-
-	counter = 0;
-	while (s[counter])
-	{
-		counter++;
-	}
+	printf("adios");
+	counter = -1;
+	while (s[++counter])
+		continue ;
 	return (counter);
 }

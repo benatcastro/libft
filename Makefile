@@ -6,54 +6,54 @@
 #    By: becastro <becastro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/04 10:13:11 by becastro          #+#    #+#              #
-#    Updated: 2022/06/08 17:48:45 by becastro         ###   ########.fr        #
+#    Updated: 2022/06/09 14:57:44 by becastro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 SRC_FILES = ft_isalpha\
 			ft_isdigit\
-			ft_isalnum			\
-			ft_isascii			\
-			ft_isprint			\
-			ft_strlen			\
-			ft_strlcpy			\
-		ft_strlcat			\
-		ft_strncmp			\
-		ft_toupper			\
-		ft_tolower			\
-		ft_strnstr			\
-		ft_atoi				\
-		ft_strchr			\
-		ft_strrchr			\
-		ft_memset			\
-		ft_bzero			\
-		ft_memchr			\
-		ft_memcmp			\
-		ft_memcpy			\
-		ft_memmove			\
-		ft_calloc			\
-		ft_strdup			\
-		ft_substr			\
-		ft_strjoin			\
-		ft_strtrim			\
-		ft_split			\
-		ft_itoa				\
-		ft_strmapi			\
-		ft_striteri		\
-		ft_putchar_fd 		\
-		ft_putstr_fd 		\
-		ft_putendl_fd		\
-		ft_putnbr_fd		\
-		ft_lstadd_front_bonus \
-		ft_lstlast_bonus     \
-		ft_lstnew_bonus 		\
-		ft_lstsize_bonus		\
-		ft_lstadd_back_bonus 	\
-		ft_lstdelone_bonus	\
-		ft_lstclear_bonus		\
-		ft_lstiter_bonus		\
-		ft_lstmap_bonus
+			ft_isalnum\
+			ft_isascii\
+			ft_isprint\
+			ft_strlen\
+			ft_strlcpy\
+			ft_strlcat\
+			ft_strncmp			\
+			ft_toupper			\
+			ft_tolower			\
+			ft_strnstr			\
+			ft_atoi				\
+			ft_strchr			\
+			ft_strrchr			\
+			ft_memset			\
+			ft_bzero			\
+			ft_memchr			\
+			ft_memcmp			\
+			ft_memcpy			\
+			ft_memmove			\
+			ft_calloc			\
+			ft_strdup			\
+			ft_substr			\
+			ft_strjoin			\
+			ft_strtrim			\
+			ft_split			\
+			ft_itoa				\
+			ft_strmapi			\
+			ft_striteri		\
+			ft_putchar_fd 		\
+			ft_putstr_fd 		\
+			ft_putendl_fd		\
+			ft_putnbr_fd		\
+			ft_lstadd_front_bonus \
+			ft_lstlast_bonus     \
+			ft_lstnew_bonus 		\
+			ft_lstsize_bonus		\
+			ft_lstadd_back_bonus 	\
+			ft_lstdelone_bonus	\
+			ft_lstclear_bonus		\
+			ft_lstiter_bonus		\
+			ft_lstmap_bonus
 
 
 
@@ -78,7 +78,6 @@ all: $(NAME)
 
 $(NAME) : $(OBJ)
 	@$(AR) $(NAME) $(OBJ)
-
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c
 	@$(CC) $(CC_FLAGS) -I $(INCLUDES) -c $< -o $@
