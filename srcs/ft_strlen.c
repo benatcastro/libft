@@ -6,7 +6,7 @@
 /*   By: becastro <becastro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 16:20:16 by becastro          #+#    #+#             */
-/*   Updated: 2022/06/09 14:56:36 by becastro         ###   ########.fr       */
+/*   Updated: 2022/06/09 14:59:28 by becastro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 size_t	ft_strlen(const char *s)
 {
 	size_t	counter;
-	printf("adios");
 	counter = -1;
 	while (s[++counter])
 		continue ;
